@@ -1,0 +1,15 @@
+image:
+  - Visual Studio 2019
+
+environment:
+  NSIS_VERSION: 3.05
+  NUGET_PACKAGE_VERSION: 3.0.5
+  NUGET_API_KEY:
+    secure: NIjfP5tSuerXAg2wRkUk7tJ3ZgWiw2bLF52yL/ZB26DTpAADxUcF7KtQysDDW8tl
+
+build_script:
+  - ps: .\build.ps1 Publish --NsisVersion $env:NSIS_VERSION --NuGetPackageVersion $env:NUGET_PACKAGE_VERSION --NugetApiKey $env:NUGET_API_KEY
+
+artifacts:
+  - path: artifacts/*.nupkg
+    name: Artifact
