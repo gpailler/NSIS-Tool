@@ -4,6 +4,7 @@ using System.Net;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.IO;
+using Nuke.Common.Tooling;
 using Nuke.Common.Tools.NuGet;
 using static Nuke.Common.IO.CompressionTasks;
 using static Nuke.Common.IO.FileSystemTasks;
@@ -73,7 +74,8 @@ class Build : NukeBuild
             NuGetPack(config => config
                 .SetTargetPath(RootDirectory / NsisNuSpecFile)
                 .SetVersion(NuGetPackageVersion)
-                .SetOutputDirectory(ArtifactsDirectory));
+                .SetOutputDirectory(ArtifactsDirectory)
+            );
         });
 
     Target Publish => _ => _
@@ -87,7 +89,9 @@ class Build : NukeBuild
             NuGetPush(config => config
                 .SetSource(NuGetServerUrl)
                 .SetApiKey(NuGetApiKey)
-                .SetTargetPath(files.Single()));
+                .SetTargetPath(files.Single())
+                .SetArgumentConfigurator(arg => arg.Add("-SkipDuplicate"))
+            );
         });
 
 }

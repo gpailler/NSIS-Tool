@@ -8,7 +8,13 @@ environment:
     secure: NIjfP5tSuerXAg2wRkUk7tJ3ZgWiw2bLF52yL/ZB26DTpAADxUcF7KtQysDDW8tl
 
 build_script:
-  - ps: .\build.ps1 Publish --NsisVersion $env:NSIS_VERSION --NuGetPackageVersion $env:NUGET_PACKAGE_VERSION --NugetApiKey $env:NUGET_API_KEY
+  - ps: >-
+      appveyor UpdateBuild -Version "$($env:NUGET_PACKAGE_VERSION).$($env:APPVEYOR_BUILD_NUMBER)"
+
+      .\build.ps1 Publish --NsisVersion $env:NSIS_VERSION --NuGetPackageVersion $env:NUGET_PACKAGE_VERSION --NugetApiKey $env:NUGET_API_KEY
+
+test: off
+deploy: off
 
 artifacts:
   - path: artifacts/*.nupkg
