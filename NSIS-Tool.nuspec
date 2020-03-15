@@ -10,7 +10,7 @@
     <licenseUrl>https://nsis.sourceforge.io/License</licenseUrl>
     <projectUrl>https://nsis.sourceforge.io/Main_Page</projectUrl>
     <repository type="git" url="https://github.com/gpailler/NSIS-Tool.git" />
-    <description>Official NSIS binaries packed in a Nuget package</description>
+    <description>Original NSIS binaries packed in a Nuget package</description>
     <summary>NSIS (Nullsoft Scriptable Install System) is a professional open source system to create Windows installers.</summary>
     <copyright>Copyright (C) 1999-2020 Contributors</copyright>
     <tags>nsis tool</tags>
