@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>NSIS-Tool</id>
+    <version>3.0.5</version>
+    <title>Nullsoft Scriptable Install System</title>
+    <authors>NSIS Contributors,gpailler</authors>
+    <owners>gpailler</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://nsis.sourceforge.io/License</licenseUrl>
+    <projectUrl>https://nsis.sourceforge.io/Main_Page</projectUrl>
+    <repository type="git" url="https://github.com/gpailler/NSIS-Tool.git" />
+    <description>Official NSIS binaries packed in a Nuget package</description>
+    <summary>NSIS (Nullsoft Scriptable Install System) is a professional open source system to create Windows installers.</summary>
+    <copyright>Copyright (C) 1999-2020 Contributors</copyright>
+    <tags>nsis tool</tags>
+  </metadata>
+  <files>
+    <file src="lib\nsis\**\*" target="tools\" />
+  </files>
+</package>

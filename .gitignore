@@ -1,0 +1,8 @@
+build/obj
+build/bin
+build/.idea
+build/.vs
+.tmp
+
+lib/
+*.nupkg
