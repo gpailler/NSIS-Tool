@@ -2,7 +2,7 @@
 [![NuGet version](https://badge.fury.io/nu/NSIS-Tool.svg)](https://badge.fury.io/nu/NSIS-Tool)
 
 ## NSIS-Tool NuGet package
-### Official NSIS binaries packed in a Nuget package
+### Original NSIS binaries packed in a Nuget package
 
 NSIS (Nullsoft Scriptable Install System) is a professional open source system to create Windows installers.
 
