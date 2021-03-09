@@ -7,7 +7,7 @@ environment:
   NSIS_VERSION: 3.06.1
   NUGET_PACKAGE_VERSION: 3.0.6.1
   NUGET_API_KEY:
-    secure: NIjfP5tSuerXAg2wRkUk7tJ3ZgWiw2bLF52yL/ZB26DTpAADxUcF7KtQysDDW8tl
+    secure: 2Vx5dYsFxi3QAG3bMbs1QuL8CnpShVjZZIqJDW+vvIoAcF3on7WyFXcSDjTrEj4v
 
 build_script:
   - ps: >-
