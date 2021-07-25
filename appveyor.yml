@@ -4,8 +4,8 @@ image:
 skip_non_tags: true
 
 environment:
-  NSIS_VERSION: 3.06.1
-  NUGET_PACKAGE_VERSION: 3.0.6.1
+  NSIS_VERSION: 3.07
+  NUGET_PACKAGE_VERSION: 3.0.7
   NUGET_API_KEY:
     secure: 2Vx5dYsFxi3QAG3bMbs1QuL8CnpShVjZZIqJDW+vvIoAcF3on7WyFXcSDjTrEj4v
 
