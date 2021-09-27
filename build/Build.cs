@@ -90,7 +90,7 @@ class Build : NukeBuild
                 .SetSource(NuGetServerUrl)
                 .SetApiKey(NuGetApiKey)
                 .SetTargetPath(files.Single())
-                .SetArgumentConfigurator(arg => arg.Add("-SkipDuplicate"))
+                .SetProcessArgumentConfigurator(arg => arg.Add("-SkipDuplicate"))
             );
         });
 
