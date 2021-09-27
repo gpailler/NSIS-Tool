@@ -1,7 +1,5 @@
 image:
   - Visual Studio 2019
-  
-skip_non_tags: true
 
 environment:
   NSIS_VERSION: 3.08

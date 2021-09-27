@@ -2,6 +2,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using Nuke.Common;
+using Nuke.Common.CI.AppVeyor;
 using Nuke.Common.Execution;
 using Nuke.Common.IO;
 using Nuke.Common.Tooling;
@@ -80,6 +81,7 @@ class Build : NukeBuild
 
     Target Publish => _ => _
         .DependsOn(Pack)
+        .OnlyWhenStatic(() => AppVeyor.Instance != null && AppVeyor.Instance.RepositoryTag)
         .Requires(() => NuGetApiKey)
         .Executes(() =>
         {
