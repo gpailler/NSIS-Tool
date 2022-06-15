@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NuGet.CommandLine" Version="5.4.0" />
+    <PackageReference Include="NuGet.CommandLine" Version="5.7.2" />
     <PackageReference Include="Nuke.Common" Version="5.3.0" />
   </ItemGroup>
 
