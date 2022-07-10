@@ -1,5 +1,7 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/oq4dfv6v0d9n549b?svg=true)](https://ci.appveyor.com/project/gpailler/nsis-tool)
-[![NuGet version](https://badge.fury.io/nu/NSIS-Tool.svg)](https://badge.fury.io/nu/NSIS-Tool)
+
+[![Build status](https://github.com/gpailler/NSIS-Tool/actions/workflows/Publish.yml/badge.svg)](https://github.com/gpailler/NSIS-Tool/actions/workflows/Publish.yml)
+[![Nuget version](https://img.shields.io/nuget/v/NSIS-Tool)](https://www.nuget.org/packages/NSIS-Tool/)
+[![Nuget downloads](https://img.shields.io/nuget/dt/NSIS-Tool)](https://www.nuget.org/packages/NSIS-Tool/)
 
 ## NSIS-Tool NuGet package
 ### Original NSIS binaries packed in a Nuget package

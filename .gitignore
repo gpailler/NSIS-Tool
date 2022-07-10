@@ -4,5 +4,6 @@ build/.idea
 build/.vs
 .tmp
 
+.nuke/temp/
 lib/
-*.nupkg
+artifacts/
