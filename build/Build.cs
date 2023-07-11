@@ -50,8 +50,8 @@ class Build : NukeBuild
     Target Clean => _ => _
         .Executes(() =>
         {
-            EnsureCleanDirectory(LibDirectory);
-            EnsureCleanDirectory(ArtifactsDirectory);
+            LibDirectory.CreateOrCleanDirectory();
+            ArtifactsDirectory.CreateOrCleanDirectory();
         });
 
     Target Pack => _ => _
@@ -128,17 +128,17 @@ class Build : NukeBuild
         .Executes(() =>
         {
             string nsisUrl = string.Format(NsisUrlTemplate, NsisVersion);
-            string tempNsisArchive = Path.GetTempFileName();
+            AbsolutePath tempNsisArchive = Path.GetTempFileName();
 
             Log.Information($"Downloading '{nsisUrl}' to '{tempNsisArchive}");
             HttpTasks.HttpDownloadFile(nsisUrl, tempNsisArchive, FileMode.Create);
 
             Log.Information($"Extracting NSIS to {LibDirectory}");
-            CompressionTasks.UncompressZip(tempNsisArchive, LibDirectory);
+            tempNsisArchive.UnZipTo(LibDirectory);
 
             Log.Information($"Renaming NSIS folder");
             RenameDirectory(LibDirectory / "nsis-" + NsisVersion, LibDirectory / "nsis");
 
-            DeleteFile(tempNsisArchive);
+            tempNsisArchive.DeleteFile();
         });
 }
