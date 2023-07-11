@@ -7,7 +7,7 @@
     <authors>NSIS Contributors,gpailler</authors>
     <owners>gpailler</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://nsis.sourceforge.io/License</licenseUrl>
+    <license type="expression">zlib-acknowledgement AND bzip2-1.0.6 AND CPL-1.0</license>
     <projectUrl>https://nsis.sourceforge.io/Main_Page</projectUrl>
     <repository type="git" url="https://github.com/gpailler/NSIS-Tool.git" />
     <description>Original NSIS binaries packed in a Nuget package</description>
