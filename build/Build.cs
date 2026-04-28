@@ -10,7 +10,6 @@ using Nuke.Common.Tools.GitHub;
 using Nuke.Common.Tools.NuGet;
 using Octokit;
 using Serilog;
-using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
 using FileMode = System.IO.FileMode;
 
@@ -86,7 +85,7 @@ class Build : NukeBuild
                 .SetSource(NuGetServerUrl)
                 .SetApiKey(NuGetApiKey)
                 .SetTargetPath(package)
-                .SetProcessArgumentConfigurator(arg => arg.Add("-SkipDuplicate"))
+                .SetProcessAdditionalArguments("-SkipDuplicate")
             );
         });
 
@@ -137,7 +136,7 @@ class Build : NukeBuild
             tempNsisArchive.UnZipTo(LibDirectory);
 
             Log.Information($"Renaming NSIS folder");
-            RenameDirectory(LibDirectory / "nsis-" + NsisVersion, LibDirectory / "nsis");
+            (LibDirectory / $"nsis-{NsisVersion}").Rename("nsis");
 
             tempNsisArchive.DeleteFile();
         });
