@@ -13,13 +13,6 @@ using Serilog;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
 using FileMode = System.IO.FileMode;
 
-[GitHubActions(
-    "Publish",
-    GitHubActionsImage.WindowsLatest,
-    OnPushTags = new[] {"v*"},
-    InvokedTargets = new[] { nameof(Publish)},
-    ImportSecrets = new[] { nameof(NuGetApiKey) },
-    EnableGitHubToken = true)]
 class Build : NukeBuild
 {
     public static int Main () => Execute<Build>(x => x.Pack);
