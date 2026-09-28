@@ -1,6 +1,6 @@
 {
   "$schema": "./build.schema.json",
 
-  "NsisVersion": "3.12",
-  "NuGetPackageVersion": "3.12.0"
+  "NsisVersion": "3.13",
+  "NuGetPackageVersion": "3.13.0"
 }
